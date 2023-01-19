@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { interval, timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,11 @@ import { interval } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'stopwatch';
+  sec: any = '0' + 0;
+  min: any = '0' + 0;
 
 
-  ngOnInit(): void {
-    const seconds = interval(1000);
+  ngOnInit() {
+    
   }
-
 }

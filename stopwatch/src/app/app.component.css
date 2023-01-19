@@ -5,6 +5,54 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-h1 {
-    margin: 35px;
+.button-play-stop .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1;
+}
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+.sw-container {
+    background-image: linear-gradient(to right, #6288df, #7774ed);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 3px 6px rgba(129, 129, 129, 0.16),
+                0 3px 6px rgba(105, 105, 105, 0.23);
+}
+.stopwatch {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.button-container button {
+    background: #fff;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: #6288df;
+}
+.button-container button:active {
+    background: #b3b5b9;
+    background-size: 100%;
+}
+.button-container span {
+    display: block;
+}
+.button-play-stop {
+    margin-right: 15px;
+}
+.button-pause {
+    margin-right: 15px;
+}
+.button-reset {
+    
 }
