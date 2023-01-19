@@ -5,13 +5,15 @@
         <span>{{min}} : </span>
         <span>{{sec}}</span>
     </div>
-    <div class="button-container">
-      <!--<span class="material-symbols-outlined">stop</span>--> 
-      <button class="button-play-stop"> <span class="material-symbols-outlined">play_arrow</span> </button> 
-      <!-- запуск / остановка отсчета времени, останавливает и обнуляет значение секундомера -->
+    <div class="button-container" (click)="start()">
+      <button class="button-play-stop"> 
+        <span *ngIf="!running" class="material-symbols-outlined">play_arrow</span>
+        <span *ngIf="running" class="material-symbols-outlined">stop</span> 
+      </button> 
       
-      <button class="button-pause"> <span class="material-symbols-outlined">pause</span> </button> <!-- работает на двойной клик (время между нажатиями не более 500 мс!) секундомер должен прекратить отсчет времени; если после него нажать старт, то возобновляется отсчет -->
+      <button (click)="pause()" class="button-pause" > <span class="material-symbols-outlined">pause</span> </button> 
+      <!-- работает на двойной клик (время между нажатиями не более 500 мс!) секундомер должен прекратить отсчет времени; если после него нажать старт, то возобновляется отсчет -->
       
-      <button class="button-reset"> <span class="material-symbols-outlined">replay</span> </button> <!-- сброс секундомера на 0.  Обнуляет и снова начинает отсчет -->
+      <button class="button-reset" (click)="reset()"> <span class="material-symbols-outlined">replay</span> </button>
     </div>
 </div>
